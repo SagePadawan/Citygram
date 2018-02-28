@@ -7,20 +7,24 @@
   }
   
   h1 {
-  
+    color: aliceblue;
   }
   
   h2 {
     font-weight: 300;
     letter-spacing: 0.025em;
+    color: aliceblue;
   }
   
   html {
     font-family: 'Montserrat', sans-serif;
-    background-color: #FEFEFE;
+    /* background-color: rgb(255, 255, 255); */
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+
   }
   
-  html, .lightbox {
+  html, .highlight {
     width: 100vw;
     height: 100vh;
   }
@@ -36,7 +40,7 @@
     margin: 0;
   }
   
-  body.lightbox-is-active {
+  body.highlight-active {
     overflow: hidden;
   }
   
@@ -50,7 +54,7 @@
   
   }
   
-  .lightbox-is-active .gallery {
+  .highlight-active .gallery {
     pointer-events: none;
   }
   
@@ -88,7 +92,7 @@
     transition: all 0.2s ease-in-out;
   }
   
-  .lightbox {
+  .highlight {
     display: block;
     position: fixed;
     top: 0; left: 0;
@@ -97,7 +101,7 @@
     background-color: rgba(0,0,0,0.75);
   }
   
-  .lightbox-is-active .lightbox {
+  .highlight-active .highlight {
     z-index: initial;
     opacity: 1;
   }
@@ -114,7 +118,7 @@
     }
   }
   
-  .lightbox__layout {
+  .highlight__layout {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,16 +126,17 @@
     height: 100%;
   }
   
-  .lightbox-is-active .lightbox__img {
+  .highlight-active .highlight__img {
     animation: grow 0.2s ease-out;
   }
   
-  .lightbox__img {
+  .highlight__img {
     max-width: 90%;
     max-height: 90%;
+    float: left;
   }
   
-  .lightbox__close {
+  .highlight__close {
     position: absolute;
     top: 0; right: 0;
     padding: 20px;
